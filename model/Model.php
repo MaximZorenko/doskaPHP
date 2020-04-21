@@ -78,7 +78,6 @@ class Model{
 		$town = $post['town'];
 		$time = $post['time'];
 		// $date = time();
-		// $date = date('Y-m-d');
 		$price = $post['price'];
 		$sql = "INSERT INTO post(title,text,id_categories,id_razd,town,time,price) 
 						VALUES ('$title','$text',$id_categories,$id_razd,'$town',$time,$price)";
