@@ -156,7 +156,7 @@ class Model{
 			razd.name_razd
 	From post JOIN zmi_categories ON zmi_categories.id = post.id_categories
 	JOIN razd ON razd.id = post.id_razd 
-	WHERE MATCH(title,text) AGAINST('%{$search}%' IN BOOLEAN MODE)
+	WHERE MATCH(title,text) AGAINST('$search' IN BOOLEAN MODE)
 	";
 	$res = $this->db->query($sql);
 
